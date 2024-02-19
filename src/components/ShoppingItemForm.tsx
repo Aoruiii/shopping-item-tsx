@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 import Item from "../models/item";
+import { uuid } from "uuidv4";
 
 const StyledForm = styled.form`
   display: flex;
@@ -16,13 +17,10 @@ function ShoppingItemForm({
   const [product, setProduct] = useState<string>("");
   const [quantity, setQuantity] = useState<number>(0);
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>): void {
+  function handleSubmit(e: React.FormEvent): void {
     e.preventDefault();
     setItems((items) => {
-      return [
-        ...items,
-        { id: items.length + 1, product: product, quantity: quantity },
-      ];
+      return [...items, { id: uuid(), product: product, quantity: quantity }];
     });
     setProduct("");
     setQuantity(0);

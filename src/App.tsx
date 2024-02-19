@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import ShoppingList from "./components/ShoppingList";
-import Item from "./models/Item";
+import Item from "./models/item";
 import ShoppingItemForm from "./components/ShoppingItemForm";
 
 function App() {
