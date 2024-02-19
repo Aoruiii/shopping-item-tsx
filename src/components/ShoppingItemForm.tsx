@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
-import Item from "../models/Item";
+import Item from "../models/item";
 
 const StyledForm = styled.form`
   display: flex;
